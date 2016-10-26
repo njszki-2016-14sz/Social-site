@@ -1,9 +1,23 @@
 .center{
-	width: 30%;
-	border: solid 5px;
+	width: 20%;
 	margin: auto;
+	margin-top: 20%;
 	text-align:center;
 }
+
 .spacing{
-	padding: 2px;
+	padding: 3px;
+}
+
+body{
+	background-image: url("img/bg.jpg");
+	background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+input[type="text"]:focus,input[type="password"]:focus{
+	outline:none;
+    border-color:#950101;
+    box-shadow:0 0 10px #950101;
 }
