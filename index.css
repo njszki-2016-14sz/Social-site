@@ -1,0 +1,9 @@
+.center{
+	width: 30%;
+	border: solid 5px;
+	margin: auto;
+	text-align:center;
+}
+.spacing{
+	padding: 2px;
+}
