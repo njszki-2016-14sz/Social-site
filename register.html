@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Blood Web</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="shortcut icon" type="image/png" href="img/favicon32.png"/>
+	</head>
+	<body>
+	<form action="" method="POST">
+		<div class="center">
+			<div class="spacing"><label>E-mail: </label><input type="text" name="E_mail"></div>
+			<div class="spacing"><label>User name: </label><input type="text" name="UserName"></div>
+			<div class="spacing"><label>Password: </label><input type="password" name="Pw"></div>
+			<form enctype="multipart/form-data" action="" method="POST">
+				<input type="hidden" name="MAX_FILE_SIZE" value="51200">
+				<div class="spacing"><input type="file" name="fajl"></div>
+			</form>
+				<div class="spacing"><input type="submit" name="Register" value="Register"></div>
+		</div>
+	</form>
+	</body>
+</html>
