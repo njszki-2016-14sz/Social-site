@@ -1,12 +1,16 @@
 .center{
-	width: auto;
-	margin: auto;
-	margin-top: 20%;
+	float: center;
+	margin-top: 10%;
 	text-align:center;
 }
 
 .spacing{
 	padding: 3px;
+}
+
+.logo{
+	float:center;
+	margin-bottom: 25px;
 }
 
 body{
