@@ -1,31 +1,73 @@
-.center{
-	float: center;
+.center {
 	margin-top: 10%;
-	text-align:center;
+	text-align: center;
+	border: solid 1px;
 }
 
-.spacing{
+.spacing {
 	padding: 3px;
 }
 
-.logo{
-	float:center;
+.logo {
+	float: center;
 	margin-bottom: 25px;
 }
 
-#hint{
+.item1 {
+	display: inline-table;
+	width: 120px;
+	float: left;
+	text-align: left;
 	font-weight: bold;
 }
 
-body{
+.row {
+	width:300px;
+	margin:auto;
+}
+
+.pw_strength {
+	width: 171px;
+	height: 5px;
+	margin-top: 0px;
+	margin-left: 125px;
+	margin-bottom: 5px;
+	border: solid 1px;
+}
+
+.easy,.medium,.hard {
+	height: 5px;
+	width: 57px;
+	position:absolute;
+}
+
+.easy{
+	background-color: red;
+}
+
+.medium{
+	background-color: yellow;
+	margin-left:57px;
+}
+
+.hard{
+	background-color: green;
+	margin-left:114px;
+}
+
+#hint {
+	font-weight: bold;
+}
+
+body {
 	background-image: url("../img/bg.jpg");
 	background-repeat:no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
 }
 
-input[type="text"]:focus,input[type="password"]:focus{
-	outline:none;
-    border-color:#950101;
-    box-shadow:0 0 10px #950101;
+input[type="text"]:focus, input[type="password"]:focus {
+	outline: none;
+    border-color: #950101;
+    box-shadow: 0 0 10px #950101;
 }
