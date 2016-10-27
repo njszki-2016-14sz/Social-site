@@ -44,8 +44,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`UserID`, `UserName`, `UserPassword`, `UserEmail`, `UserDate`, `UserBIO`, `UserFirstName`, `UserLastName`, `UserImgLocation`) VALUES
 (1, 'fulopdavid232', '5f461ccf73b963773aaa7685ac585190', 'fulopdavid232@gmail.com', '1996-02-02', 'Üdv Dávid vagyok, az adatbázis szerkesztője és utálom a munkámat ha láttok az utcán és tehetitek öljetek meg mert az élet egy szenvedés.', 'Dávid', 'Fülöp', 'images.jpg'),
-(2, 'MetalHunterR', 'a6da2093b7e8556fc27515152b422a50', 'kriszonodi@gmail.com', '1996-08-12', 'The one who wants to see the world burn down...', 'Kovács', 'Krisztián', 'MetalHunterR.jpg'),
-(3, 'probaJanos', 'c0a8e1e5e307cc5b33819b387b5f01fd', 'proba@gmail.com', '1990-01-01', 'probaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaprobaproba', 'proba', 'proba', 'proba.jpg');
+(2, 'MetalHunterR', 'a6da2093b7e8556fc27515152b422a50', 'kriszonodi@gmail.com', '1996-08-12', 'The one who wants to see the world burn down...', 'Kovács', 'Krisztián', 'MetalHunterR.jpg');
 
 --
 -- Indexek a kiírt táblákhoz
