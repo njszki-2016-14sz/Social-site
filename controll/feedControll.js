@@ -9,7 +9,7 @@ setInterval(function() {
     .appendTo('#ads');
 },  3000);
 
-function myFunction() {
+function optionsDropdwn() {
 	document.getElementById("myDropdown").classList.toggle("show");
 }
 

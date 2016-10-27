@@ -84,7 +84,7 @@ li.dropdown {
 
 #profile, #ads {
 	width: 300px;
-	top: 40px;
+	top: 50px;
 	position: fixed;
 	bottom: 0;
 }
@@ -98,11 +98,11 @@ li.dropdown {
 }
 
 #profile {
-	left: 0;
+	left: 5px;
 }
 
 #ads {
-	right: 0;
+	right: 0px;
 }
 
 /*
