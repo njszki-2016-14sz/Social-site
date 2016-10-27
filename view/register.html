@@ -5,6 +5,8 @@
 		<title>Blood Web</title>
 		<link rel="stylesheet" type="text/css" href="../style/index.css">
 		<link rel="shortcut icon" type="image/png" href="../img/favicon32.png"/>
+		<script src="../controll/jquery-3.1.1.js"></script>
+		<script src="../controll/pwStrength.js"></script>
 	</head>
 	<body>
 	<form action="../controll/RegSignINControll.php" method="POST">
@@ -30,13 +32,15 @@
 			</div>
 			<div class="row spacing">
 				<div class="item1">Password:</div>
-				<div><input type="password" name="Pw"></div>
+				<div><input id="Pw" onkeydown="anim()" type="password" name="Pw"></div>
 			</div>
 			<div class="row">
 				<div class="pw_strength">
-					<div class="easy"></div>
-					<div class="medium"></div>
-					<div class="hard"></div>
+				<ul>
+					<li><div class="easy"></div></li>
+					<li><div class="medium"></div></li>
+					<li><div class="hard"></div></li>
+				</ul>
 				</div>
 			</div>
 			<div class="row spacing">

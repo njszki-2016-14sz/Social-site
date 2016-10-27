@@ -15,14 +15,15 @@
 .item1 {
 	display: inline-table;
 	width: 120px;
+	height: 20px;
 	float: left;
 	text-align: left;
 	font-weight: bold;
 }
 
 .row {
-	width:300px;
-	margin:auto;
+	width: 300px;
+	margin: auto;
 }
 
 .pw_strength {
@@ -31,13 +32,12 @@
 	margin-top: 0px;
 	margin-left: 125px;
 	margin-bottom: 5px;
-	border: solid 1px;
 }
 
-.easy,.medium,.hard {
+.easy, .medium, .hard {
 	height: 5px;
 	width: 57px;
-	position:absolute;
+	display: none;
 }
 
 .easy{
@@ -46,16 +46,25 @@
 
 .medium{
 	background-color: yellow;
-	margin-left:57px;
 }
 
 .hard{
 	background-color: green;
-	margin-left:114px;
 }
 
 #hint {
 	font-weight: bold;
+}
+
+ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+	float:left;
 }
 
 body {
