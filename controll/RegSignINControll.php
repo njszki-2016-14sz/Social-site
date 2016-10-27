@@ -12,7 +12,7 @@
 				$sql = "SELECT * FROM Users WHERE '$email' = UserEmail AND '$pwd' = UserPassword;";
 				print_r ($DB->query($sql));
 				
-				//továbbítani a tömböt és az oldalt a newsfeed oldalra
+				//továbbítani a tömböt és az oldalt a User.php oldalra
 			}else{
 				print "Nincs jelszó";
 				//Visszaadni hogy rossz a jelszó
