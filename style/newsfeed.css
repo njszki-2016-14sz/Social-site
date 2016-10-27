@@ -12,8 +12,8 @@ input[type="text"]:focus, input[type="password"]:focus{
 }
 
 #menu {
-	float: top;
 	position: fixed;
+	margin-top: 0px;
 	width: 100%;
 	height: 40px;
 }
@@ -25,12 +25,9 @@ input[type="text"]:focus, input[type="password"]:focus{
 }
 
 #feed {
-	float: middle;
 	margin-left: auto;
 	margin-right: auto;
-	position: center;
 	width: 900px;
-	overflow-x: hidden;
 }
 
 #ads {
