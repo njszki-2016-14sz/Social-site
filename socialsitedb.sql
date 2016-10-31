@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.5.1
 -- http://www.phpmyadmin.net
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2016. Okt 27. 14:16
--- Kiszolgáló verziója: 10.1.16-MariaDB
--- PHP verzió: 5.6.24
+-- Létrehozás ideje: 2016. Okt 31. 13:04
+-- Kiszolgáló verziója: 5.7.11
+-- PHP verzió: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,12 +23,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet ehhez a táblához `newsfeed`
+--
+
+CREATE TABLE `newsfeed` (
+  `userTag` varchar(16) NOT NULL,
+  `userMessage` varchar(1024) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `postDate` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- A tábla adatainak kiíratása `newsfeed`
+--
+
+INSERT INTO `newsfeed` (`userTag`, `userMessage`, `postDate`) VALUES
+('MetalHunterR', 'This is a new message for testing written by me ;) :D', '2016-10-31');
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet ehhez a táblához `users`
 --
 
 CREATE TABLE `users` (
   `UserID` int(11) NOT NULL,
-  `UserName` varchar(16) COLLATE utf8_unicode_ci NOT NULL,
+  `UserTag` varchar(16) COLLATE utf8_unicode_ci NOT NULL,
   `UserPassword` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `UserEmail` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `UserDate` date NOT NULL,
@@ -42,9 +61,9 @@ CREATE TABLE `users` (
 -- A tábla adatainak kiíratása `users`
 --
 
-INSERT INTO `users` (`UserID`, `UserName`, `UserPassword`, `UserEmail`, `UserDate`, `UserBIO`, `UserFirstName`, `UserLastName`, `UserImgLocation`) VALUES
+INSERT INTO `users` (`UserID`, `UserTag`, `UserPassword`, `UserEmail`, `UserDate`, `UserBIO`, `UserFirstName`, `UserLastName`, `UserImgLocation`) VALUES
 (1, 'fulopdavid232', '5f461ccf73b963773aaa7685ac585190', 'fulopdavid232@gmail.com', '1996-02-02', 'Üdv Dávid vagyok, az adatbázis szerkesztője és utálom a munkámat ha láttok az utcán és tehetitek öljetek meg mert az élet egy szenvedés.', 'Dávid', 'Fülöp', 'images.jpg'),
-(2, 'MetalHunterR', 'a6da2093b7e8556fc27515152b422a50', 'kriszonodi@gmail.com', '1996-08-12', 'The one who wants to see the world burn down...', 'Kovács', 'Krisztián', 'MetalHunterR.jpg');
+(2, 'MetalHunterR', 'a6da2093b7e8556fc27515152b422a50', 'kriszonodi@gmail.com', '1996-08-12', 'The one who wants to see the world burn down...', 'Krisztián', 'Kovács', 'MetalHunterR.jpg');
 
 --
 -- Indexek a kiírt táblákhoz
