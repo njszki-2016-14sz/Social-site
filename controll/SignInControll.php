@@ -1,35 +1,29 @@
 <?php
 	include("../model/DB.php");
 	include("../model/User.php");
+	session_start();
 	
 	$DB = new DB("SocialSiteDB");// Példányosítás
-	$db = $DB->connection; // Connection elnevezése $db ként
 	
 	//Belépés
-	if(isset($_POST['Login'])) {
-		if(isset($_POST['E_mail'])) {
+		if($_POST['Login']){
+			$pwd = md5($_POST['Pw']);
 			$email=$_POST['E_mail'];
-			if(isset($_POST['Pw'])) {
-				$pwd = md5($_POST['Pw']);
-				$sql = "SELECT * FROM Users WHERE '$email' = UserEmail AND '$pwd' = UserPassword;";
-				
-				//továbbítani a tömböt és az oldalt a User.php oldalra
-				// Adatok beillesztése a User.php oldalra
-				$User = new User(null, null, null, null, null, null);
-				
-
-				header('Location: ../view/newsfeed.html');
-			} else {
-				print "Nincs jelszó";
-				//Visszaadni hogy rossz a jelszó
+			$sql = "SELECT * FROM users WHERE UserEmail ='$email' AND UserPassword = '$pwd';";
+			$res = $DB->query($sql);
+			if($res == false){
+				$_SESSION['error']="wrong password or username";
+				header("location: ../view/index.php");
 			}
-		} else {
-			print "Nincs email";
-			//Visszaadni hogy rossz az email
-		}
-	}
-	//Regisztráció
-	if(isset($_POST['Register'])) {
+			
+			//továbbítani a tömböt és az oldalt a User.php oldalra
+			// Adatok beillesztése a User.php oldalra
+			$User = new User(null, null, null, null, null, null);
 		
-	}
+		}
+
+	//Regisztráció
+		if(isset($_POST['Register'])) {
+			
+		}
 ?>
