@@ -33,7 +33,7 @@ class DB {
 		//Kell e lekérdezni az adatbázisból
 		if(strpos($queryString,"SELECT") !== false) {
 			$rows = Array();
-			while($record = mysql_fetch_assoc($resultId)) {
+			while($record = mysql_fetch_assoc($resultId)){
 				$rows[] = $record;
 			}
 			return $rows;

@@ -12,22 +12,20 @@
 			<div class = "logo"><img src="../img/logo_shaded.png" style="width:500px;height:134px;"></div>
 			<div class="spacing"><input type="text" placeholder= "E-mail" name="E_mail"></div>
 			<div class="spacing"><input type="password" placeholder="Password" name="Pw"></div>
-			<div class="spacing"><input type="submit" name="Login" value="Login"></div>
+			<div class="spacing"><input type="submit" name="Logingin" value="Login"></div>
 			<?php
+			session_start();
 			if(isset($_SESSION["error"]))
 			{
 				$error=$_SESSION["error"];
 				?>
-			<span id='hint'><?=$error?></span>
+			<span id='hint'><?php print $error;?></span><br>
 			<?php
-			}else
-			{
-			?>
-			<span id="hint">Don't have an account yet?</span>
-			<?php
+			$_SESSION["error"]=null;
 			}
 			?>
-			<div class="spacing"><a href="register.html"><input type="button" name="ToRegister" value="Register"></a></div>
+			<span id="hint">Don't have an account yet?</span>
+			<div class="spacing"><input type="submit" name="ToRegister" value="Register"></a></div>
 		</div>
 	</form>
 	</body>
