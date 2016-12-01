@@ -32,7 +32,7 @@
 			</div>
 			<div class="row spacing">
 				<div class="item1">Password:</div>
-				<div><input id="Pw" onkeydown="anim()" type="password" name="Pw"></div>
+				<div><input id="Pw" onkeyup="anim()" type="password" name="Pw"></div>
 			</div>
 			<div class="row">
 				<div class="pw_strength">
