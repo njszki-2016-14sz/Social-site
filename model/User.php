@@ -17,23 +17,23 @@ class User
 		$this->profilePic = $pic;
 	}
 	
-	static function GetProfileName() {
+	function GetProfileName() {
 		return $this->firstName + " " + $this->lastName;
 	}
 	
-	static function GetUserTag() {
+	function GetUserTag() {
 		return $this->userTag;
 	}	
 	
-	static function GetBirthDay() {
+	function GetBirthDay() {
 		return $this->birthDay;
 	}
 	
-	static function GetProfileBio() {
+	function GetProfileBio() {
 		return $this->profileBio;
 	}
 	
-	static function GetProfilePic() {
+	function GetProfilePic() {
 		return $this->profilePic;
 	}
 }
