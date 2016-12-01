@@ -15,14 +15,14 @@
 		
 		if($res == false)
 		{
-			$_SESSION['error']="Wrong password or username!";
+			$_SESSION['error'] = "Wrong password or username!";
 			header("location: ../view/index.php");
 		} 
 		else 
 		{
 			// $res <-- egy Array ( Array[0] -> a sor amit visszaad DB-ből)
 			$_SESSION['User'] = new User($res[0][UserFirstName], $res[0][UserLastName], $res[0][UserName], $res[0][UserDate], $res[0][UserBIO], $res[0][UserImgLocation]);
-			header("location: ../view/newsfeed.html");
+			header("location: ../view/newsfeed.php");
 		}
 	}
 	
@@ -34,18 +34,25 @@
 		$LastName = $_POST['LastName'];
 		$UserName = $_POST['UserName'];
 		$pwd = md5($_POST['Pw']); $pwdConf = md5($_POST['Pw_conf']);
+		
 		if($pwd == $pwdConf)
 		{
 			$sql = "INSERT INTO users 
 					(UserName, UserPassword, UserEmail, UserDate, UserFirstName, UserBIO, UserLastName, UserImgLocation)
 					VALUES ('$UserName', '$pwd', '$email', '1990-01-01', '$FirstName', 'DefBIO', '$LastName', 'proba.jpg')";
 			$res = $DB->query($sql);
-			if($res == false){
-				if(strpos(mysql_error,"Duplicate entry") !== false){
-					if(strpos(mysql_error,"UserEmail") !== false){
-						$_SESSION['error']="Már van ilyen E-mail Cím köszi.";
-					}else{
-						$_SESSION['error']="Már van ilyen User név köszi.";
+			
+			if($res == false)
+			{
+				if(strpos(mysql_error,"Duplicate entry") !== false)
+				{
+					if(strpos(mysql_error,"UserEmail") !== false)
+					{
+						$_SESSION['error'] = "Már van ilyen E-mail Cím köszi.";
+					}
+					else
+					{
+						$_SESSION['error'] = "Már van ilyen User név köszi.";
 					}
 				}
 				header("location: ../view/register.php");
