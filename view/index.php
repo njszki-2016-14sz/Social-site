@@ -17,23 +17,26 @@ if(isset($_GET['logout']))
 	<body>
 		<form action="../controll/SignInControll.php" method="POST">
 			<div class="center">
-				<div class = "logo"><img src="../img/logo_shaded.png" style="width:500px;height:134px;"></div>
-				<div class="spacing"><input type="text" placeholder= "E-mail" name="E_mail"></div>
-				<div class="spacing"><input type="password" placeholder="Password" name="Pw"></div>
-				<div class="spacing"><input type="submit" name="Logingin" value="Login"></div>
+				<div><img class = "logo" src="../img/logo_shaded.png"></div>
+				<div class="spacing"><input class="round" type="text" placeholder= "E-mail" name="E_mail"></div>
+				<div class="spacing"><input class="round" type="password" placeholder="Password" name="Pw"></div>
+				<div class="spacing"><input class="round" type="submit" name="Logingin" value="Login"></div>
 				<?php
 					
 					if(isset($_SESSION["error"]))
 					{
 						$error=$_SESSION["error"];
 				?>
-						<span id='hint'><?php print $error;?></span><br>
+						<span class="hint"><?php print $error;?></span><br>
 				<?php
 						$_SESSION["error"]=null;
 					}
 				?>
-				<span id="hint">Don't have an account yet?</span>
-				<div class="spacing"><input type="submit" name="ToRegister" value="Register"></a></div>
+				
+				<div class="spacing helpbox">
+					<span class=" list hint">Don't have an account yet?</span>
+					<input class="list round" type="submit" name="ToRegister" value="Register"></a>
+				</div>
 			</div>
 		</form>
 	</body>

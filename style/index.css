@@ -8,6 +8,8 @@
 }
 
 .logo {
+	width:500px;
+	height:134px;
 	float: center;
 	margin-bottom: 25px;
 }
@@ -24,6 +26,12 @@
 .row {
 	width: 300px;
 	margin: auto;
+}
+
+.round {
+	border-radius: 15px;
+	padding: 5px 15px 5px 15px;
+	border-style:none;
 }
 
 .pw_strength {
@@ -52,8 +60,20 @@
 	background-color: green;
 }
 
-#hint {
+.hint {
 	font-weight: bold;
+}
+
+.list{
+	display: block;
+	margin: auto;
+}
+
+.helpbox {
+	border: solid 1px;
+	width: 250px;
+	margin: 15px auto auto auto;
+	border-radius: 20px;
 }
 
 ul {
@@ -77,5 +97,9 @@ body {
 input[type="text"]:focus, input[type="password"]:focus {
 	outline: none;
     border-color: #950101;
-    box-shadow: 0 0 10px #950101;
+    box-shadow: 0px 0px 20px #950101;
+}
+
+input[type="submit"] {
+	font-weight: bold;
 }
