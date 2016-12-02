@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <?php
+if(!isset($_SESSION['User'])){
+	header("location: index.php");
+}
 	include("../model/User.php");
 	session_start();
 	$user = $_SESSION['User']; //példányosítás a Sessionnel, te pöcs <3
