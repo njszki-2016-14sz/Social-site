@@ -2,6 +2,7 @@
 <?php
 	include("../model/User.php");
 	session_start();
+	$user = $_SESSION['User']; //példányosítás a Sessionnel, te pöcs <3
 ?>
 
 <html>
@@ -36,10 +37,10 @@
 					<div id="profilePic">
 						<img src="../img/usersPics/MetalHunterR.jpg" width="100%" height="75%"/>
 					</div>
-					<h1><?php echo User::GetProfileName();?></h1>
-					<h3>Blood Tag: <a href="#">@<?php echo User::GetUserTag();?></a></h3>
-					<br>Birthday: <?php echo User::GetBirthDay();?>
-					<br>Profile Bio: <?php echo User::GetProfileBio();?>
+					<h1><?php echo $user -> GetProfileName();?></h1>
+					<h3>Blood Tag: <a href="#">@<?php echo $user -> GetUserTag();?></a></h3>
+					<br>Birthday: <?php echo $user -> GetBirthDay();?>
+					<br>Profile Bio: <?php echo $user -> GetProfileBio();?>
 				</div>
 				<div id="feed">
 					<div id="newmessage">

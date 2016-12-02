@@ -17,24 +17,28 @@ class User
 		$this->profilePic = $pic;
 	}
 	
-	static function GetProfileName() {
-		return $this->firstName + " " + $this->lastName;
+	function GetProfileName() {
+		return $this->firstName." ".$this->lastName; //Te pöcs php-ban . al kell összefűzni stringet
 	}
 	
-	static function GetUserTag() {
+	function GetUserTag() {
 		return $this->userTag;
 	}	
 	
-	static function GetBirthDay() {
+	function GetBirthDay() {
 		return $this->birthDay;
 	}
 	
-	static function GetProfileBio() {
+	function GetProfileBio() {
 		return $this->profileBio;
 	}
 	
-	static function GetProfilePic() {
+	function GetProfilePic() {
 		return $this->profilePic;
 	}
 }
+/* 
+1.) Static-al ne hívj osztályt mert elbaszakszik 
+2.) Newsfeeden példányosítsd a User-t
+*/
 ?>
