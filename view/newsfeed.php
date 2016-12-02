@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <?php
-if(!isset($_SESSION['User'])){
-	header("location: index.php");
-}
 	include("../model/User.php");
 	session_start();
-	$user = $_SESSION['User']; //példányosítás a Sessionnel, te pöcs <3
+	$user = $_SESSION['User']; //példányosítás a Sessionnel, te pöcs <3	
+	if(!isset($_SESSION['User']))
+	{
+		header("location: index.php");
+	}
 ?>
-
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -28,7 +28,7 @@ if(!isset($_SESSION['User'])){
 							<a href="#">Profile</a>
 							<a href="#">Security Options</a>								
 							<a href="#">Settings</a>						
-							<a href="index.html">Log Out</a>
+							<a href="index.php?logout=true">Log Out</a>
 						</div>
 					</li>
 					<li><a href="#news">News</a></li>					

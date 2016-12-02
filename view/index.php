@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if(isset($_GET['logout']))
+{
+	session_destroy();
+}
+?>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -15,7 +22,7 @@
 				<div class="spacing"><input type="password" placeholder="Password" name="Pw"></div>
 				<div class="spacing"><input type="submit" name="Logingin" value="Login"></div>
 				<?php
-					session_start();
+					
 					if(isset($_SESSION["error"]))
 					{
 						$error=$_SESSION["error"];
