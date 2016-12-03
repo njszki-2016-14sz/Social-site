@@ -28,7 +28,7 @@
 			</div>
 			<div class="row spacing">
 				<div class="item1">User Tag:</div>
-				<div><input type="text" name="UserName"></div>
+				<div><input type="text" name="UserTag"></div>
 			</div>
 			<div class="row spacing">
 				<div class="item1">Password:</div>

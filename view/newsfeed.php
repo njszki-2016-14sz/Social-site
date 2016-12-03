@@ -26,7 +26,7 @@
 							<a href="#">Profile</a>
 							<a href="#">Security Options</a>								
 							<a href="#">Settings</a>						
-							<a href="index.html">Log Out</a>
+							<a href="index.php">Log Out</a>
 						</div>
 					</li>
 					<li><a href="#news">News</a></li>					
@@ -36,7 +36,7 @@
 			<div class='feedwrapper'>
 				<div id="profile">
 					<div id="profilePic">
-						<img src="../img/usersPics/MetalHunterR.jpg" width="100%" height="75%"/>
+						<img src=<?php echo $user->GetProfilePic();?> width="100%" height="75%"/>
 					</div>
 					<h1><?php echo $user->GetProfileName();?></h1>
 					<h3>Blood Tag: <a href="#">@<?php echo $user->GetUserTag();?></a></h3>
@@ -46,7 +46,7 @@
 				<div id="feed">
 					<div id="newmessage">
 						<div id="posterpics">
-							<img src="../img/usersPics/MetalHunterR.jpg" width="90px" height="90px"/>
+							<img src=<?php echo $user->GetProfilePic();?> width="90px" height="90px"/>
 						</div>
 						<div id="feedmessage">
 							<input type="text" placeholder="Tell us... What's in your mind?" name="Message">

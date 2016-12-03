@@ -21,7 +21,7 @@
 		else 
 		{
 			// $res <-- egy Array ( Array[0] -> a sor amit visszaad DB-ből)
-			$_SESSION['User'] = new User($res[0][UserFirstName], $res[0][UserLastName], $res[0][UserName], $res[0][UserDate], $res[0][UserBIO], $res[0][UserImgLocation]);
+			$_SESSION['User'] = new User($res[0][UserFirstName], $res[0][UserLastName], $res[0][UserTag], $res[0][UserDate], $res[0][UserBIO], $res[0][UserImgLocation]);
 			header("location: ../view/newsfeed.php");
 		}
 	}
@@ -32,13 +32,13 @@
 		$email = $_POST['E_mail'];
 		$FirstName = $_POST['FirstName'];
 		$LastName = $_POST['LastName'];
-		$UserName = $_POST['UserName'];
+		$UserName = $_POST['UserTag'];
 		$pwd = md5($_POST['Pw']); $pwdConf = md5($_POST['Pw_conf']);
 		
 		if($pwd == $pwdConf)
 		{
 			$sql = "INSERT INTO users 
-					(UserName, UserPassword, UserEmail, UserDate, UserFirstName, UserBIO, UserLastName, UserImgLocation)
+					(UserTag, UserPassword, UserEmail, UserDate, UserFirstName, UserBIO, UserLastName, UserImgLocation)
 					VALUES ('$UserName', '$pwd', '$email', '1990-01-01', '$FirstName', 'DefBIO', '$LastName', 'proba.jpg')";
 			$res = $DB->query($sql);
 			

@@ -18,7 +18,7 @@ class User
 	}
 	
 	function GetProfileName() {
-		return $this->firstName + " " + $this->lastName;
+		return $this->lastName . ' ' . $this->firstName;
 	}
 	
 	function GetUserTag() {
@@ -34,7 +34,7 @@ class User
 	}
 	
 	function GetProfilePic() {
-		return $this->profilePic;
+		return "../img/usersPics/".$this->profilePic;
 	}
 }
 ?>
