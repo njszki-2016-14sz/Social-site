@@ -72,6 +72,7 @@
 
 .hint {
 	font-weight: bold;
+	color: white;
 }
 
 .list{
@@ -84,6 +85,7 @@
 	width: 250px;
 	margin: 15px auto auto auto;
 	border-radius: 20px;
+	background: rgba(10, 10, 10, 0.7);
 }
 
 ul {
