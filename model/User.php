@@ -18,7 +18,11 @@ class User
 	}
 	
 	function GetProfileName() {
+<<<<<<< HEAD
 		return $this->lastName . ' ' . $this->firstName;
+=======
+		return $this->firstName." ".$this->lastName; //Te pöcs php-ban . al kell összefűzni stringet
+>>>>>>> origin/master
 	}
 	
 	function GetUserTag() {
@@ -34,7 +38,15 @@ class User
 	}
 	
 	function GetProfilePic() {
+<<<<<<< HEAD
 		return "../img/usersPics/".$this->profilePic;
+=======
+		return $this->profilePic;
+>>>>>>> origin/master
 	}
 }
+/* 
+1.) Static-al ne hívj osztályt mert elbaszakszik 
+2.) Newsfeeden példányosítsd a User-t
+*/
 ?>
