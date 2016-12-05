@@ -2,16 +2,12 @@
 <?php
 	include("../model/User.php");
 	session_start();
-<<<<<<< HEAD
 	
 	$user = $_SESSION['User'];
-=======
-	$user = $_SESSION['User']; //példányosítás a Sessionnel, te pöcs <3	
 	if(!isset($_SESSION['User']))
 	{
 		header("location: index.php");
 	}
->>>>>>> origin/master
 ?>
 <html>
 	<head>
@@ -33,11 +29,7 @@
 							<a href="#">Profile</a>
 							<a href="#">Security Options</a>								
 							<a href="#">Settings</a>						
-<<<<<<< HEAD
-							<a href="index.php">Log Out</a>
-=======
 							<a href="index.php?logout=true">Log Out</a>
->>>>>>> origin/master
 						</div>
 					</li>
 					<li><a href="#news">News</a></li>					
@@ -49,17 +41,10 @@
 					<div id="profilePic">
 						<img src=<?php echo $user->GetProfilePic();?> width="100%" height="75%"/>
 					</div>
-<<<<<<< HEAD
 					<h1><?php echo $user->GetProfileName();?></h1>
 					<h3>Blood Tag: <a href="#">@<?php echo $user->GetUserTag();?></a></h3>
 					<br>Birthday: <?php echo $user->GetBirthDay();?>
 					<br>Profile Bio: <?php echo $user->GetProfileBio();?>
-=======
-					<h1><?php echo $user -> GetProfileName();?></h1>
-					<h3>Blood Tag: <a href="#">@<?php echo $user -> GetUserTag();?></a></h3>
-					<br>Birthday: <?php echo $user -> GetBirthDay();?>
-					<br>Profile Bio: <?php echo $user -> GetProfileBio();?>
->>>>>>> origin/master
 				</div>
 				<div id="feed">
 					<div id="newmessage">

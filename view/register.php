@@ -14,40 +14,10 @@
 			<div>
 				<img class = "logo" src="../img/logo_shaded.png">
 			</div>
-<<<<<<< HEAD
-			<div class="row spacing"> 
-				<div class="item1">E-mail:</div>
-				<div><input type="text" name="E_mail"></div>
-			</div>
-			<div class="row spacing">
-				<div class="item1">First Name:</div>
-				<div><input type="text" name="FirstName"></div>
-			</div>
-			<div class="row spacing">
-				<div class="item1">Last Name:</div>
-				<div><input type="text" name="LastName"></div>
-			</div>
-			<div class="row spacing">
-				<div class="item1">User Tag:</div>
-				<div><input type="text" name="UserTag"></div>
-			</div>
-			<div class="row spacing">
-				<div class="item1">Password:</div>
-				<div><input id="Pw" onkeyup="anim()" type="password" name="Pw"></div>
-			</div>
-			<div class="row">
-				<div class="pw_strength">
-				<ul>
-					<li><div class="easy"></div></li>
-					<li><div class="medium"></div></li>
-					<li><div class="hard"></div></li>
-				</ul>
-=======
 			<div class="container">
 				<div class="row spacing">
 					<div class="item1">E-mail:</div>
 					<div><input class="round" type="text" name="E_mail"></div>
->>>>>>> origin/master
 				</div>
 				<div class="row spacing">
 					<div class="item1">First Name:</div>

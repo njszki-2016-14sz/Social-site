@@ -8,8 +8,8 @@
 }
 
 .logo {
-	width:500px;
-	height:134px;
+	width: 500px;
+	height: 134px;
 	float: center;
 	margin-bottom: 25px;
 }
@@ -96,12 +96,12 @@ ul {
 }
 
 li {
-	float:left;
+	float: left;
 }
 
 body {
 	background-image: url("../img/bg.jpg");
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
 }
