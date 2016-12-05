@@ -17,7 +17,7 @@ if(isset($_GET['logout']))
 	<body>
 		<form action="../controll/SignInControll.php" method="POST">
 			<div class="center">
-				<div><img class = "logo" src="../img/logo_shaded.png"></div>
+				<div><img class ="logo" src="../img/logo_shaded.png"></div>
 				<div class="spacing"><input class="round" type="text" placeholder= "E-mail" name="E_mail"></div>
 				<div class="spacing"><input class="round" type="password" placeholder="Password" name="Pw"></div>
 				<div class="spacing"><input class="round" type="submit" name="Logingin" value="Login"></div>
@@ -34,8 +34,8 @@ if(isset($_GET['logout']))
 				?>
 				
 				<div class="spacing helpbox">
-					<span class=" list hint">Don't have an account yet?</span>
-					<input class="list round" type="submit" name="ToRegister" value="Register"></a>
+					<span class="hint">Don't have an account yet?</span>
+					<input class="round" type="submit" name="ToRegister" value="Register"></a>
 				</div>
 			</div>
 		</form>

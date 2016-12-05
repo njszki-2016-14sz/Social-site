@@ -17,7 +17,7 @@
 			<div class="container">
 				<div class="row spacing">
 					<div class="item1">E-mail:</div>
-					<div><input class="round" type="text" name="E_mail"></div>
+					<div class=""><input class="round" type="text" name="E_mail"></div>
 				</div>
 				<div class="row spacing">
 					<div class="item1">First Name:</div>
@@ -33,7 +33,7 @@
 				</div>
 				<div class="row spacing">
 					<div class="item1">Password:</div>
-					<div><input class="round" id="Pw" onkeyup="anim()" type="password" name="Pw"></div>
+					<div class="Pw_tooltip"><input class="round" id="Pw" onkeyup="anim()" type="password" name="Pw"></div>
 				</div>
 				<div class="row">
 					<div class="pw_strength">
