@@ -11,9 +11,10 @@
 	<body>
 	<form action="../controll/SignInControll.php" method="POST">
 		<div class="center">
-			<div class = "logo">
-				<img src="../img/logo_shaded.png" style="width:500px;height:134px;">
+			<div>
+				<img class = "logo" src="../img/logo_shaded.png">
 			</div>
+<<<<<<< HEAD
 			<div class="row spacing"> 
 				<div class="item1">E-mail:</div>
 				<div><input type="text" name="E_mail"></div>
@@ -41,25 +42,56 @@
 					<li><div class="medium"></div></li>
 					<li><div class="hard"></div></li>
 				</ul>
+=======
+			<div class="container">
+				<div class="row spacing">
+					<div class="item1">E-mail:</div>
+					<div><input class="round" type="text" name="E_mail"></div>
+>>>>>>> origin/master
 				</div>
-			</div>
-			<div class="row spacing">
-				<div class="item1">Confirm Password:</div>
-				<div> <input type="password" name="Pw_conf"> </div>
-			</div>
-			<?php
-			session_start();
-			if(isset($_SESSION["error"]))
-			{
-				$error=$_SESSION["error"];
+				<div class="row spacing">
+					<div class="item1">First Name:</div>
+					<div><input class="round" type="text" name="FirstName"></div>
+				</div>
+				<div class="row spacing">
+					<div class="item1">Last Name:</div>
+					<div><input class="round" type="text" name="LastName"></div>
+				</div>
+				<div class="row spacing">
+					<div class="item1">User Tag:</div>
+					<div><input class="round" type="text" name="UserName"></div>
+				</div>
+				<div class="row spacing">
+					<div class="item1">Password:</div>
+					<div><input class="round" id="Pw" onkeyup="anim()" type="password" name="Pw"></div>
+				</div>
+				<div class="row">
+					<div class="pw_strength">
+					<ul>
+						<li><div class="easy"></div></li>
+						<li><div class="medium"></div></li>
+						<li><div class="hard"></div></li>
+					</ul>
+					</div>
+				</div>
+				<div class="row spacing">
+					<div class="item1">Confirm Password:</div>
+					<div> <input class="round" type="password" name="Pw_conf"> </div>
+				</div>
+				<?php
+				session_start();
+				if(isset($_SESSION["error"]))
+				{
+					$error=$_SESSION["error"];
+					?>
+				<span id='hint'><?php print $error;?></span><br>
+				<?php
+				$_SESSION["error"]=null;
+				}
 				?>
-			<span id='hint'><?php print $error;?></span><br>
-			<?php
-			$_SESSION["error"]=null;
-			}
-			?>
-			<div class="row spacing"> 
-				<input type="submit" name="Register" value="Register">
+				<div class="row spacing"> 
+					<input class="round" type="submit" name="Register" value="Register">
+				</div>
 			</div>
 			
 		</div>

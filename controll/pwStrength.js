@@ -23,40 +23,25 @@ function anim() {
 	}
 	
 	if(strength < 2){
-		$(".easy").hide();
-		$(".medium").hide();
-		$(".hard").hide();
+		$(".easy").animate({ width: 'hide'});
+		$(".medium").animate({ width: 'hide'});
+		$(".hard").animate({ width: 'hide'});
 	}
 	switch(strength){
 		case 3:
-			$(".easy").show();
-			$(".medium").hide();
-			$(".hard").hide();
+			$(".easy").animate({ width: 'show'});
+			$(".medium").animate({ width: 'hide'});
+			$(".hard").animate({ width: 'hide'});
 			break;
 		case 4:
-			$(".easy").show();
-			$(".medium").show();
-			$(".hard").hide();
+			$(".easy").animate({ width: 'show'});
+			$(".medium").animate({ width: 'show'});
+			$(".hard").animate({ width: 'hide'});
 			break;
 		case 5:
-			$(".easy").show();
-			$(".medium").show();
-			$(".hard").show();
+			$(".easy").animate({ width: 'show'});
+			$(".medium").animate({ width: 'show'});
+			$(".hard").animate({ width: 'show'});
 			break;
 	}
-	/*if($(".easy").is(":hidden")) {
-		$(".easy").animate({
-            width: 'toggle'
-        });
-	}
-	if(true) {
-		$(".medium").animate( {
-            width: 'toggle'
-        });
-	}
-	if(true) {
-		$(".hard").animate( {
-            width: 'toggle'
-        });
-	}*/
 }
