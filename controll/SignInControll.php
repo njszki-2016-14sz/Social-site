@@ -15,7 +15,7 @@
 		
 		if($res == false)
 		{
-			$_SESSION['error'] = "Wrong password or username!";
+			$_SESSION['error'] = "Wrong password or email!";
 			header("location: ../view/index.php");
 		} 
 		else 
@@ -32,14 +32,14 @@
 		$email = $_POST['E_mail'];
 		$FirstName = $_POST['FirstName'];
 		$LastName = $_POST['LastName'];
-		$UserName = $_POST['UserTag'];
+		$UserTag = $_POST['UserTag'];
 		$pwd = md5($_POST['Pw']); $pwdConf = md5($_POST['Pw_conf']);
 		
 		if($pwd == $pwdConf)
 		{
 			$sql = "INSERT INTO users 
 					(UserTag, UserPassword, UserEmail, UserDate, UserFirstName, UserBIO, UserLastName, UserImgLocation)
-					VALUES ('$UserName', '$pwd', '$email', '1990-01-01', '$FirstName', 'DefBIO', '$LastName', 'proba.jpg')";
+					VALUES ('$UserTag', '$pwd', '$email', '1990-01-01', '$FirstName', 'DefBIO', '$LastName', 'proba.jpg')";
 			$res = $DB->query($sql);
 			
 			if($res == false)
