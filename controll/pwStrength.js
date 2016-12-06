@@ -45,3 +45,33 @@ function anim() {
 			break;
 	}
 }
+
+function isComplete(){
+	$(".submit").prop('disabled', true);
+	
+	$(".required").focusout( function(){
+		if($(this).val().length < 4) {
+			$(this).css("background-color", "rgba(149,50,50,0.8)");
+		}
+		else {
+			$(this).css("background-color", "white");
+			allFilled();
+		}
+	});
+}
+
+function allFilled(){
+	var isDisabled = false;
+	var allInputs = $(":input");
+	
+	allInputs.each(function(){
+		if($(this).is("[type=text]") || $(this).is("[type=password]")){
+			if($(this).val() == ""){
+				isDisabled = true;
+			}
+		}
+	});
+	
+	$(".submit").prop('disabled', isDisabled);
+	
+}
