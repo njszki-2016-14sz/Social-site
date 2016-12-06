@@ -52,8 +52,10 @@
 							<img src=<?php echo $user->GetProfilePic();?> width="90px" height="90px"/>
 						</div>
 						<div id="feedmessage">
-							<input type="text" placeholder="Tell us... What's in your mind?" name="Message">
-							<input type="submit" value="Post to Feed" name="PostMessage">
+							<form method="post" action=<?php $user->AddPostToDB(); ?>>
+								<input type="text" placeholder="Tell us... What's in your mind?" name="Message">
+								<input type="submit" value="Post to Feed" name="PostMessage">
+							</form>
 						</div>
 					</div>
 					<div id="usersMessage">

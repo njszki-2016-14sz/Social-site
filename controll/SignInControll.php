@@ -9,7 +9,7 @@
 	if(isset($_POST['Logingin'])) 
 	{
 		$pwd = md5($_POST['Pw']);
-		$email=$_POST['E_mail'];
+		$email = $_POST['E_mail'];
 		$sql = "SELECT * FROM users WHERE UserEmail ='$email' AND UserPassword = '$pwd';";
 		$res = $DB->query($sql);		
 		
@@ -33,7 +33,8 @@
 		$FirstName = $_POST['FirstName'];
 		$LastName = $_POST['LastName'];
 		$UserTag = $_POST['UserTag'];
-		$pwd = md5($_POST['Pw']); $pwdConf = md5($_POST['Pw_conf']);
+		$pwd = md5($_POST['Pw']); 
+		$pwdConf = md5($_POST['Pw_conf']);
 		
 		if($pwd == $pwdConf)
 		{

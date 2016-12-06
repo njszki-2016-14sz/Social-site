@@ -8,63 +8,63 @@
 		<script src="../controll/jquery-3.1.1.js"></script>
 		<script src="../controll/pwStrength.js"></script>
 	</head>
+	
 	<body>
-	<form action="../controll/SignInControll.php" method="POST">
-		<div class="center">
-			<div>
-				<img class = "logo" src="../img/logo_shaded.png">
-			</div>
-			<div class="container">
-				<div class="row spacing">
-					<div class="item1">E-mail:</div>
-					<div class=""><input class="round" type="text" name="E_mail"></div>
+		<form action="../controll/SignInControll.php" method="POST">
+			<div class="center">
+				<div>
+					<img class = "logo" src="../img/logo_shaded.png">
 				</div>
-				<div class="row spacing">
-					<div class="item1">First Name:</div>
-					<div><input class="round" type="text" name="FirstName"></div>
-				</div>
-				<div class="row spacing">
-					<div class="item1">Last Name:</div>
-					<div><input class="round" type="text" name="LastName"></div>
-				</div>
-				<div class="row spacing">
-					<div class="item1">User Tag:</div>
-					<div><input class="round" type="text" name="UserTag"></div>
-				</div>
-				<div class="row spacing">
-					<div class="item1">Password:</div>
-					<div class="Pw_tooltip"><input class="round" id="Pw" onkeyup="anim()" type="password" name="Pw"></div>
-				</div>
-				<div class="row">
-					<div class="pw_strength">
-					<ul>
-						<li><div class="easy"></div></li>
-						<li><div class="medium"></div></li>
-						<li><div class="hard"></div></li>
-					</ul>
+				<div class="container">
+					<div class="row spacing">
+						<div class="item1">E-mail:</div>
+						<div class=""><input class="round" type="text" name="E_mail"></div>
 					</div>
-				</div>
-				<div class="row spacing">
-					<div class="item1">Confirm Password:</div>
-					<div> <input class="round" type="password" name="Pw_conf"> </div>
-				</div>
-				<?php
-				session_start();
-				if(isset($_SESSION["error"]))
-				{
-					$error=$_SESSION["error"];
+					<div class="row spacing">
+						<div class="item1">First Name:</div>
+						<div><input class="round" type="text" name="FirstName"></div>
+					</div>
+					<div class="row spacing">
+						<div class="item1">Last Name:</div>
+						<div><input class="round" type="text" name="LastName"></div>
+					</div>
+					<div class="row spacing">
+						<div class="item1">User Tag:</div>
+						<div><input class="round" type="text" name="UserTag"></div>
+					</div>
+					<div class="row spacing">
+						<div class="item1">Password:</div>
+						<div class="Pw_tooltip"><input class="round" id="Pw" onkeyup="anim()" type="password" name="Pw"></div>
+					</div>
+					<div class="row">
+						<div class="pw_strength">
+						<ul>
+							<li><div class="easy"></div></li>
+							<li><div class="medium"></div></li>
+							<li><div class="hard"></div></li>
+						</ul>
+						</div>
+					</div>
+					<div class="row spacing">
+						<div class="item1">Confirm Password:</div>
+						<div> <input class="round" type="password" name="Pw_conf"> </div>
+					</div>
+					<?php
+						session_start();
+						if(isset($_SESSION["error"]))
+						{
+							$error=$_SESSION["error"];
 					?>
-				<span id='hint'><?php print $error;?></span><br>
-				<?php
-				$_SESSION["error"]=null;
-				}
-				?>
-				<div class="row spacing"> 
-					<input class="round" type="submit" name="Register" value="Register">
-				</div>
+							<span id='hint'><?php print $error;?></span><br>
+					<?php
+							$_SESSION["error"]=null;
+						}
+					?>
+					<div class="row spacing"> 
+						<input class="round" type="submit" name="Register" value="Register">
+					</div>
+				</div>			
 			</div>
-			
-		</div>
-	</form>
+		</form>
 	</body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <?php
-session_start();
-if(isset($_GET['logout']))
-{
-	session_destroy();
-}
+	session_start();
+	if(isset($_GET['logout']))
+	{
+		session_destroy();
+	}
 ?>
 <html>
 	<head>
