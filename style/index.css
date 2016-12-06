@@ -7,7 +7,7 @@
     z-index: 98;
     width: auto;
 	margin-left: 50px;
-	text-align:left;
+	text-align: left;
 	content: "-At least one upper- and lowercase letter \A-One number \A-A symbol (@, &, !, $) \A-Length of 6";
 	white-space: pre;
 }
@@ -57,7 +57,7 @@
 .round {
 	border-radius: 0px;
 	padding: 5px 15px 5px 15px;
-	border-style:none;
+	border-style: none;
 }
 
 .container {
@@ -144,7 +144,7 @@ input[type="submit"] {
 	transition: 0.3s;
 	transition-timing-function: ease-out;
 	padding: 5px 15px 5px 15px;
-	border-style:none;
+	border-style: none;
 }
 
 input[type="submit"]:hover {
