@@ -18,7 +18,7 @@
 				<div class="container">
 					<div class="row spacing">
 						<div class="item1">E-mail:</div>
-						<div><input class="round required" type="text" name="E_mail" onfocusout="isComplete()"></div>
+						<div><input class="round required" type="text" name="E_mail"></div>
 					</div>
 					<div class="row spacing">
 						<div class="item1">First Name:</div>
@@ -37,7 +37,7 @@
 					<div class="row spacing">
 						<div class="item1">Password:</div>
 						<div class="tooltip" data-tooltip="-An upper- and lowercase letter &#10;-A number &#10;-A symbol (@, &, !, $) &#10;-Length of 6">
-							<input class="round required" id="Pw" onkeyup="anim()" type="password" name="Pw">
+							<input class="round required" id="Pw" onkeyup="anim();" type="password" name="Pw">
 						</div>
 					</div>
 					<div class="row">

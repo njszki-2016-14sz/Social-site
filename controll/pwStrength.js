@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	isComplete();
 	});
-});
 
 function anim() {
 	var strength = 0;
