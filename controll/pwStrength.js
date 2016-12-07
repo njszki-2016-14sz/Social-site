@@ -1,3 +1,8 @@
+$(document).ready(function(){
+	isComplete();
+	});
+});
+
 function anim() {
 	var strength = 0;
 	
@@ -49,8 +54,8 @@ function anim() {
 function isComplete(){
 	$(".submit").prop('disabled', true);
 	
-	$(".required").focusout( function(){
-		if($(this).val().length < 4) {
+	$(".required").on("focusout", function(){
+		if($(this).val().length < 2) {
 			$(this).css("background-color", "rgba(149,50,50,0.8)");
 		}
 		else {
@@ -73,5 +78,4 @@ function allFilled(){
 	});
 	
 	$(".submit").prop('disabled', isDisabled);
-	
 }

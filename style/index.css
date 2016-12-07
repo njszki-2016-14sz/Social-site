@@ -1,18 +1,4 @@
-.Pw_tooltip:hover:after {
-    background: rgba(10, 10, 10, 0.7);
-    border-radius: 5px;
-    color: #fff;
-    padding: 5px 15px;
-    position: absolute;
-    z-index: 98;
-    width: auto;
-	margin-left: 50px;
-	text-align: left;
-	content: "-At least one upper- and lowercase letter \A-One number \A-A symbol (@, &, !, $) \A-Length of 6";
-	white-space: pre;
-}
-
-.Pw_tooltip:hover:before {
+.tooltip:hover:before {
     border: solid;
     border-color: #333 transparent;
     border-width: 6px 6px 0px 6px;
@@ -22,6 +8,21 @@
 	transform: rotate(90deg);
 	margin-top: 10px;
 	margin-left: 241px;
+}
+
+.tooltip:hover:after {
+    background: rgba(10, 10, 10, 0.7);
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: auto;
+	height: auto;
+	margin-left: 50px;
+	text-align: left;
+	content: ""attr(data-tooltip)"";
+	white-space: pre;
 }
 
 .center {
@@ -55,7 +56,7 @@
 }
 
 .round {
-	border-radius: 0px;
+	border-radius: 15px;
 	padding: 5px 15px 5px 15px;
 	border-style: none;
 }
@@ -107,6 +108,7 @@
 }
 
 .helpbox {
+	border-radius: 5px;
 	width: 250px;
 	margin: 15px auto auto auto;
 	padding: 5px 0px 10px 0px;

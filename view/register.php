@@ -9,7 +9,7 @@
 		<script src="../controll/pwStrength.js"></script>
 	</head>
 	
-	<body onload="isComplete();">
+	<body>
 		<form action="../controll/SignInControll.php" method="POST">
 			<div class="center">
 				<div>
@@ -30,11 +30,15 @@
 					</div>
 					<div class="row spacing">
 						<div class="item1">User Tag:</div>
-						<div><input class="round required" type="text" name="UserTag"></div>
+						<div class="tooltip" data-tooltip="Your nickname">
+							<input class="round required" type="text" name="UserTag">
+						</div>
 					</div>
 					<div class="row spacing">
 						<div class="item1">Password:</div>
-						<div class="Pw_tooltip"><input class="round required" id="Pw" onkeyup="anim()" type="password" name="Pw"></div>
+						<div class="tooltip" data-tooltip="-An upper- and lowercase letter &#10;-A number &#10;-A symbol (@, &, !, $) &#10;-Length of 6">
+							<input class="round required" id="Pw" onkeyup="anim()" type="password" name="Pw">
+						</div>
 					</div>
 					<div class="row">
 						<div class="pw_strength">
@@ -63,7 +67,7 @@
 					<div class="row spacing"> 
 						<input class="round submit" type="submit" name="Register" value="Register">
 					</div>
-				</div>			
+				</div>
 			</div>
 		</form>
 	</body>
