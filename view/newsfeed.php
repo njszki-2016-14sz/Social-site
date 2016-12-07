@@ -65,15 +65,17 @@
 						</div>
 					</div>
 					<div id="usersMessage">
-						<div id="poster">
-							MetalHunterR
-						</div>
-						<div id="message">
-							Test Message Here
-						</div>
-						<div id="postDate">
-							2016-12-07
-						</div>						
+						<?php
+							<div id="poster">
+								MetalHunterR
+							</div>
+							<div id="message">
+								Test Message Here
+							</div>
+							<div id="postDate">
+								2016-12-07
+							</div>							
+						?>					
 					</div>	
 				</div>
 				<div id="ads">

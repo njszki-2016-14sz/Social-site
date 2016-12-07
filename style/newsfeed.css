@@ -125,23 +125,24 @@ li.dropdown {
 
 #poster {
 	background-color: #950101;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	color:white;
 	height: 30px;
 	padding-left: 10px;	
 }
 
 #message {
-	height: 40px;	
+	padding-top: 10px;
+	padding-bottom: 10px;
 	padding-left: 10px;
 	background-color: white;
 }
 
 #postDate {
 	background-color: #333;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;	
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;	
 	color: white;
 	padding-left: 10px;	
 	margin-bottom: 10px;
