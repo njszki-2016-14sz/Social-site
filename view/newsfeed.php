@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
-	include("../model/User.php");
-	include("../model/Post.php");
+	error_reporting(0);
+	require_once("../model/User.php");
+	require_once("../model/postAll.php");
 	session_start();
 	
 	$user = $_SESSION['User'];
@@ -66,15 +67,21 @@
 					</div>
 					<div id="usersMessage">
 						<?php
-							<div id="poster">
-								MetalHunterR
-							</div>
-							<div id="message">
-								Test Message Here
-							</div>
-							<div id="postDate">
-								2016-12-07
-							</div>							
+						$posts = getAllPosts();
+							foreach($posts as $ertek)
+							{
+						?>
+								<div id = "poster">
+									<?php echo $ertek->GetTagger(); ?>
+								</div>
+								<div id = "message">
+									<?php echo $ertek->GetMessage(); ?>
+								</div>
+								<div id = "postDate">
+									<?php echo $ertek->GetPostDate(); ?>
+								</div>
+						<?php
+							}
 						?>					
 					</div>	
 				</div>
