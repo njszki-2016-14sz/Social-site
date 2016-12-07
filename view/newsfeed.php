@@ -8,6 +8,12 @@
 	{
 		header("location: index.php");
 	}
+	
+	$post = $_SESSION['Post'];
+	/*if(!isset($_SESSION['Post']))
+	{
+		header("location: index.php");
+	}*/	
 ?>
 <html>
 	<head>
@@ -52,7 +58,7 @@
 							<img src=<?php echo $user->GetProfilePic();?> width="90px" height="90px"/>
 						</div>
 						<div id="feedmessage">
-							<form method="post" action=<?php $user->AddPostToDB(); ?>>
+							<form method="POST" action="../controll/SignInControll.php">
 								<input type="text" placeholder="Tell us... What's in your mind?" name="Message">
 								<input type="submit" value="Post to Feed" name="PostMessage">
 							</form>

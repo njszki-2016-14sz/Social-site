@@ -1,6 +1,7 @@
 <?php
 	include("../model/DB.php");
 	include("../model/User.php");
+	include("../model/Post.php");
 	session_start();
 	
 	$DB = new DB("SocialSiteDB");// Példányosítás
@@ -13,7 +14,7 @@
 		$sql = "SELECT * FROM users WHERE UserEmail ='$email' AND UserPassword = '$pwd';";
 		$res = $DB->query($sql);		
 		
-		if($res == false)
+		if($res === false)
 		{
 			$_SESSION['error'] = "Wrong password or email!";
 			header("location: ../view/index.php");
@@ -66,5 +67,32 @@
 	if(isset($_POST['ToRegister'])) 
 	{
 		header("location: ../view/register.php");
+	}
+	
+	//Posztolás
+	if(isset($_POST["PostMessage"]))
+	{
+		$user = $_SESSION['User'];
+		$tagger = $user->GetUserTag();
+		$postDate = date("Y-m-d");
+		$message = $_POST['Message'];
+		
+		$sql = "INSERT INTO newsfeed
+			(userTag, userMessage, postDate)
+			VALUES ('$tagger', '$message', '$postDate')";
+		$res = $DB->query($sql);
+		
+		if($res === false)
+		{
+			print("Can't post the message");
+			$_SESSION['error'] = "Can't post the message";
+		}
+		//Sikeres poszt továbbküldése
+		else
+		{
+			//Post osztályon keresztül átküldi az adatokat a newsfeedre
+			$_SESSION['Post'] = new Post($tagger, $postDate, $message);
+			header("location: ../view/newsfeed.php");
+		}
 	}
 ?>
