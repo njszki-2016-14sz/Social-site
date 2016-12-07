@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 	include("../model/User.php");
+	include("../model/Post.php");
 	session_start();
 	
 	$user = $_SESSION['User'];
@@ -9,11 +10,10 @@
 		header("location: index.php");
 	}
 	
-	$post = $_SESSION['Post'];
-	/*if(!isset($_SESSION['Post']))
+	if(isset($_SESSION['PostData']))
 	{
-		header("location: index.php");
-	}*/	
+		$post = $_SESSION['PostData'];
+	}
 ?>
 <html>
 	<head>

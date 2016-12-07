@@ -91,7 +91,7 @@
 		else
 		{
 			//Post osztályon keresztül átküldi az adatokat a newsfeedre
-			$_SESSION['Post'] = new Post($tagger, $postDate, $message);
+			$_SESSION['PostData'] = new Post($tagger, $postDate, $message);
 			header("location: ../view/newsfeed.php");
 		}
 	}
