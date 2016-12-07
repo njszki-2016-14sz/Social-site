@@ -118,7 +118,33 @@ li.dropdown {
 }
 
 #usersMessage {
+	border-radius: 10px;
+	width: 100%;
 	margin-top: 10px;
+}
+
+#poster {
+	background-color: #950101;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color:white;
+	height: 30px;
+	padding-left: 10px;	
+}
+
+#message {
+	height: 40px;	
+	padding-left: 10px;
+	background-color: white;
+}
+
+#postDate {
+	background-color: #333;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;	
+	color: white;
+	padding-left: 10px;	
+	margin-bottom: 10px;
 }
 
 /*
