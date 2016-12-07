@@ -6,7 +6,7 @@ include("Post.php");
 function getAllPosts()
 {
 	$DB = new DB("SocialSiteDB");
-	$sql = "SELECT * FROM newsfeed";
+	$sql = "SELECT * FROM newsfeed ORDER BY id DESC";
 	$posts = $DB->query($sql);
 	$kimenet = Array();
 	

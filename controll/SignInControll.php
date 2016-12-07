@@ -84,8 +84,12 @@
 		
 		if($res === false)
 		{
-			print("Can't post the message");
-			$_SESSION['error'] = "Can't post the message";
+			if($message=="")
+			{
+				$_SESSION['error'] = "Can't post your message!";
+				header("location: ../view/newsfeed.php");
+			}
+			
 		}
 		//Sikeres poszt továbbküldése
 		else
