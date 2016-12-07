@@ -85,15 +85,15 @@
 	display: none;
 }
 
-.easy{
+.easy {
 	background-color: red;
 }
 
-.medium{
+.medium {
 	background-color: yellow;
 }
 
-.hard{
+.hard {
 	background-color: green;
 }
 
@@ -113,6 +113,15 @@
 	margin: 15px auto auto auto;
 	padding: 5px 0px 10px 0px;
 	background: rgba(10, 10, 10, 0.7);
+}
+
+.error_box {
+	border-radius: 5px;
+	width: 15%;
+	padding: 5px 10px 5px 10px;
+	background: black;
+	color: #E10202;
+	margin: 15px auto 0px auto;
 }
 
 ul {

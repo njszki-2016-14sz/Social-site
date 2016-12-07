@@ -27,12 +27,11 @@
 					{
 						$error=$_SESSION["error"];
 				?>
-						<span class="hint"><?php print $error;?></span><br>
+						<div class="error_box hint"><?php print $error;?></div>
 				<?php
 						$_SESSION["error"]=null;
 					}
 				?>
-				
 				<div class="spacing helpbox">
 					<span class="hint">Don't have an account yet?</span>
 					<input class="round" type="submit" name="ToRegister" value="Register"></a>
