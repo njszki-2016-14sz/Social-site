@@ -23,7 +23,13 @@ class Post
 	
 	function GetMessage()
 	{
-		return $this->message;
+		$msg = $this->message;
+		$order   = array("\r\n", "\n", "\r");
+		$replace = '<br />';
+		
+		$new_msg = str_replace($order, $replace, $msg);
+		
+		return $new_msg;
 	}		
 }
 ?>

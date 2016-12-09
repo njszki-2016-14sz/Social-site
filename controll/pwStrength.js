@@ -5,23 +5,23 @@ $(document).ready(function(){
 function anim() {
 	var strength = 0;
 	
-	var pattern = /^(?=.*\d).+$/g;//digit
+	var pattern = /^(?=.*\d).+$/g; //digit
 	if(pattern.test($("#Pw").val())){
 		strength += 1;
 	}
-	pattern = /^(?=.*[A-Z]).+$/g;//uppercase
+	pattern = /^(?=.*[A-Z]).+$/g; //uppercase
 	if(pattern.test($("#Pw").val())){
 		strength += 1;
 	}
-	pattern = /^(?=.*[a-z]).+$/g;//lowercase
+	pattern = /^(?=.*[a-z]).+$/g; //lowercase
 	if(pattern.test($("#Pw").val())){
 		strength += 1;
 	}
-	pattern = /^(?=.*[-+_!@#$%^&*.,?]).+$/g;//symbol
+	pattern = /^(?=.*[-+_!@#$%^&*.,?]).+$/g; //symbol
 	if(pattern.test($("#Pw").val())){
 		strength += 1;
 	}
-	pattern = /^.{6,}$/g;//length
+	pattern = /^.{6,}$/g; //length
 	if(pattern.test($("#Pw").val())){
 		strength += 1;
 	}

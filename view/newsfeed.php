@@ -87,7 +87,7 @@
 				</div>
 				<div id="ads">
 					<div id="adsSlide">
-						<img src="../img/ads/boobs.png" width="90%" height="75%"/>
+						<img src="../img/ads/adRenting.png" width="90%" height="75%"/>
 					</div>
 				</div>
 			</div>
